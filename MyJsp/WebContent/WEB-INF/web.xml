@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Myweb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>hunder</servlet-name>
+  	<servlet-class>servlet.hunder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>hunder</servlet-name>
+  	<url-pattern>/hunder</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>adder</servlet-name>
+  	<servlet-class>servlet.Adderservlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>adder</servlet-name>
+  	<url-pattern>/adder</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DataError</servlet-name>
+  	<servlet-class>servlet.NewAdder</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DataError</servlet-name>
+  	<url-pattern>/DataError</url-pattern>
+  </servlet-mapping>
+  
+
+   <servlet>
+  	<servlet-name>Diviber</servlet-name>
+  	<servlet-class>servlet.Diviber</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Diviber </servlet-name>
+  	<url-pattern>/Diviber</url-pattern>
+  </servlet-mapping>
+  
+  <error-page>
+  	<exception-type>java.lang.NumberFormatException</exception-type>
+  	<location>/exception/NumberFormatError.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<exception-type>java.lang.ArihException</exception-type>
+  	<location>/exception/ArihError.jsp</location>
+  </error-page>
+  
+   <error-page>
+  	<error-code>404</error-code>
+  	<location>/exception/NotFoundError.jsp</location>
+  </error-page>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/exception/ServerIntenalError.jsp</location>
+  </error-page>
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
